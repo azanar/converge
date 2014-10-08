@@ -19,8 +19,6 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_runtime_dependency 'activesupport'
-  spec.add_runtime_dependency 'aws-sdk'
-  spec.add_runtime_dependency 'pg'
 
   spec.add_development_dependency 'test-unit'
   spec.add_development_dependency 'mocha' 
