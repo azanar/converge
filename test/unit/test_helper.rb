@@ -1,10 +1,17 @@
-require 'coveralls'
-Coveralls.wear!
-
-if ENV["ENABLE_SIMPLE_COV"]
+if ENV["COVERAGE"]
+  require 'coveralls'
+  require 'codeclimate-test-reporter'
   require 'simplecov'
-  require File.expand_path('../../simplecov_helper', __FILE__)
-  SimpleCov.start 'pocketchange'
+  SimpleCov.start do
+    add_group "Lib", "lib"
+    add_filter "/test/"
+    command_name "Unit Tests"
+    formatter SimpleCov::Formatter::MultiFormatter[
+      SimpleCov::Formatter::HTMLFormatter,
+      Coveralls::SimpleCov::Formatter,
+      CodeClimate::TestReporter::Formatter
+    ]
+  end
 end
 
 require 'test/unit'
