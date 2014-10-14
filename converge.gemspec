@@ -18,12 +18,12 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency 'hydrogen'
-  spec.add_runtime_dependency 'activesupport'
+  spec.add_runtime_dependency 'hydrogen', '~> 0'
+  spec.add_runtime_dependency 'activesupport', '~> 4'
 
-  spec.add_development_dependency 'test-unit'
-  spec.add_development_dependency 'mocha' 
-  spec.add_development_dependency 'simplecov'
+  spec.add_development_dependency 'test-unit', '~> 3'
+  spec.add_development_dependency 'mocha', '~> 1'
+  spec.add_development_dependency 'simplecov', '~> 0'
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake", "~> 10.0"
 end
