@@ -26,6 +26,13 @@ Or install it yourself as:
 
 ## Usage
 
+Unless you are a database developer, you will want to use one of several Converge adapters for your particular database:
+
+PostgreSQL  - [Converge-PG](http://github.com/azanar/converge-pg)
+Redshift - [Converge-RS](http://github.com/azanar/converge-rs)
+
+If your database isn't listed above. Please feel free to hack together an adapter, and let me know about it. :-)
+
 ```ruby
 require 'converge'
 
