@@ -1,6 +1,6 @@
 # Converge
 
-Data merger for Redshift
+Data merger for relational databases.
 
 ## Installation
 
@@ -20,7 +20,28 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'converge'
+
+config = {
+    columns: %w{id name address},
+    target_name: "my_table",
+    staging_name "my_staging_table"
+}
+
+orm_model = MyModel
+
+connection = Converge::Pg::Connection.new(orm_model.connection)
+
+model = Converge::Model.new(config, orm_model)
+
+staging_table = Converge::DB::Table::Staging.new(model)
+
+target_table = Converge::DB::Table::Target.new(model)
+
+merger = Converge::DB::Table::Merger.new(staging_table, connection)
+merger.merge(target_table)
+```
 
 API Documentation
 -------------
@@ -35,6 +56,6 @@ See [Contributing](CONTRIBUTING.md) for details.
 License
 -------
 
-&copy;2014 Ed Carrel. Released under the MIT License.
+&copy;2015 Ed Carrel. Released under the MIT License.
 
 See [License](LICENSE) for details.

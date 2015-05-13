@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Converge::VERSION
   spec.authors       = ["Ed Carrel"]
   spec.email         = ["edward@carrel.org"]
-  spec.summary       = %q{Data merger for Redshift}
+  spec.summary       = %q{Data merger for relational databases}
   spec.description   = %q{Data merger}
   spec.homepage      = "https://github.com/azanar/converge"
   spec.license       = "MIT"
