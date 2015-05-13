@@ -1,3 +1,9 @@
+[![Gem Version](https://badge.fury.io/rb/converge.png)](http://badge.fury.io/rb/converge)
+[![Build Status](https://travis-ci.org/azanar/converge.png?branch=master)](https://travis-ci.org/azanar/converge)
+[![Code Climate](https://codeclimate.com/github/azanar/converge.png)](https://codeclimate.com/github/azanar/converge)
+[![Coverage Status](https://coveralls.io/repos/azanar/converge/badge.png?branch=master)](https://coveralls.io/r/azanar/converge?branch=master)
+[![Dependency Status](https://gemnasium.com/azanar/converge.png)](https://gemnasium.com/azanar/converge)
+
 # Converge
 
 Data merger for relational databases.
